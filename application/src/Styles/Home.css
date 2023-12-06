@@ -1,0 +1,18 @@
+.bgimage{
+    height: 70%;
+    width: 71%;
+   padding-left: 30%;
+   padding-top: 5%;
+   border-radius: 18px;
+   box-shadow: 100px;
+}
+body{
+    background-color: aqua;
+}
+.heading{
+   text-align: center; 
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   padding-top: 20px;
+   font-weight: 100px;
+   color: rgb(189, 47, 255);
+}

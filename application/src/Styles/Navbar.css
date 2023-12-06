@@ -1,0 +1,24 @@
+.Navbar{
+    background-color: tomato;
+}
+.Title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.navitem{
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.navcontainer{
+    display: block;
+    /* background-color: aliceblue; */
+    border-radius: 0.5rem;
+    text-decoration: none;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+
+}
+.navcontainer:hover{
+    background-color: #172554;
+}
+
+
