@@ -15,6 +15,7 @@ export  function Footer() {
 
         <section className='mb-4'>
          <h5>Online Gas Booking</h5>
+         
         </section>
 
       </MDBContainer>
