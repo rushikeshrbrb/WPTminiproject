@@ -8,7 +8,7 @@ export function Home(){
     
     return(
       
-        <Container>
+        <div>
             <div className="heading">
                     <h1>Welcome to gas booking</h1>
             </div>
@@ -16,7 +16,7 @@ export function Home(){
                     <Image src={img} className="bgimage"></Image>
             </div>
             
-        </Container>
+            </div>
 
 
 

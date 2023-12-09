@@ -1,0 +1,66 @@
+/* registration.css */
+.container {
+    background-color: white; /* Blue background color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    padding-left:60px;
+    width: 600px;
+    
+  }
+  h2 {
+    text-align: center;
+    color:black; /* White text color */
+  }
+  p {
+    text-align: center;
+    color: black; /* White text color */
+  }
+  .form-group {
+    margin-bottom: 10px;
+    
+  }
+  .label {
+    display: block;
+    margin-bottom: 4px;
+    color: black; /* White text color */
+  }
+
+  .input {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black; /* White border color */
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: transparent; /* Transparent background */
+    color: black; /* White text color */
+  }
+
+  .button {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3498db; /* White background color */
+    color: white; /* Blue text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: green; /* Darker blue on hover */
+  }
+  .error-message {
+    color: #e74c3c;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .heading{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 20px;
+    font-weight: 100px;
+    color: rgb(189, 47, 255);
+  }
+  
+  

@@ -1,0 +1,71 @@
+/* NewConnection.css */
+
+
+.nccontainer {
+    background-color: #ffffff; /* White background color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Adjust the width as needed */
+    max-width: 1099px; /* Set a maximum width if necessary */
+    margin-left:20%;
+    margin-top: 10px;
+    position: absolute;
+  
+    ;
+  }
+  
+  h4 {
+    text-align: center;
+    color: black; /* White text color */
+  }
+
+  h1 {
+    text-align: center;
+    color: black; /* White text color */
+  }
+  
+  .ncform-group {
+    margin-bottom: 20px;
+  }
+  
+  .nclabel {
+    display: block;
+    margin-bottom: 4px;
+    color: black; /* White text color */
+  }
+  
+  
+  .ncinput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ffffff; /* White border color */
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: whitesmoke; /* Transparent background */
+    color: black; /* White text color */
+  
+  }
+
+  select.status {
+    width:100%;
+}
+  
+  .ncbutton {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ffffff; /* White background color */
+    color: #3498db; /* Blue text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .ncbutton:hover {
+    background-color: green; /* Darker blue on hover */
+  }
+  
+  /* Add more styles as needed */
+  
