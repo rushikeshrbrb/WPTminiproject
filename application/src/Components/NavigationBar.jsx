@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import "../Styles/Navbar.css"
 
@@ -7,7 +7,7 @@ export class NavigationBar extends Component {
     render() {
         return (
             <Navbar className='Navbar'  variant="" expand="lg">
-                <Container >
+                  <Container fluid>
                     <Navbar.Brand href="#home" className='Title'>Online Gas Booking System</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -25,6 +25,11 @@ export class NavigationBar extends Component {
                                 <Nav.Link className='navcontainer'>Login</Nav.Link>
                             </LinkContainer>
                             
+                        </Nav>
+                        <Nav className='ml-auto  '>
+                            <Nav.Link className='navcontainer'>
+                                <Button variant='primary'>LogOut</Button>
+                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

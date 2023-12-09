@@ -1,0 +1,60 @@
+.lbody {
+    font-family: 'Arial', sans-serif;
+    background-color: grey;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  .lh2 
+  { 
+     text-align: center;
+   
+  }
+  .auth-form-container, .login-form{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  @media screen and (min-width: 600px) {
+    .auth-form-container {
+      padding: 5rem;
+      border: 3px black;
+      border-radius: 15px;
+      margin: 0.5rem;
+    }
+  }
+  .link-btn {
+  
+    background: none;
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .lbutton:hover {
+    background-color: rgb(56, 46, 202); /* Darker blue on hover */
+  }
+  .linput {
+    margin: 10px;
+    padding: 1rem;
+    width: 300px;
+    border-radius: 10px;
+    height: 60px;
+  }
+  
+  .lbutton {
+    border: none;
+    padding-left: 0%;
+    padding: 10px;
+    margin-top: 10px ;
+    margin-left: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(94, 78, 190);
+    width: 200px;
+    height: 70px;
+    align-content: center;
+    color: rgb(235, 225, 235)
+  }
