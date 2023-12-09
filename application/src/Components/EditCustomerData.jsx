@@ -1,15 +1,16 @@
 import { Alert, Col, Container, Form , Row} from "react-bootstrap";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../Styles/newConnection.css"
-import { saveNewConnection } from "../Services/services";
+import { fetchDataFromName, saveNewConnection, updateCustomerData } from "../Services/services";
+import { useParams } from "react-router-dom";
 // import './NewConnection.css';
-export function NewConnection() {
+export function EditCustomerData() {
 
 
 
 
-
+  const params=useParams();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -23,11 +24,13 @@ export function NewConnection() {
     city: '',
     zip: ''
   });
+ const [customer,setCustomers]=useState({});
+
   const [isSubmit,setIsSubmit]=useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    
+    // console.log(params.name);
     // e.preventDefault();
     // Add logic to handle form submission
   };
@@ -35,31 +38,31 @@ export function NewConnection() {
   const handleSubmit = async(e) => {
     e.preventDefault();
     try {
-      const result= await saveNewConnection(formData);
-      setFormData({name: '',
-    
-      email: '',
-      phone: '',
-      date:'',
-      nation:'',
-      address: '',
-      status: '',
-      city: '',
-      zip: ''})
-      setIsSubmit(true);
-      setTimeout(() => {
-        setIsSubmit(false);
-       }, 2000);
-      console.log(result.message);
+        const result=await updateCustomerData(formData,params.name);
+        console.log(result);
     } catch (error) {
       console.log(error);
     }
     // console.log(formData);
     // Add logic to handle form submission (e.g., API request)
   };
+  const populateCustomerData=async()=>{
+    try {
+        const result=await fetchDataFromName(params.name);
+        setCustomers(result.NewConnections);
+        console.log(customer.name);
+    } catch (error) {
+       console.log(error); 
+    }
+
+  }
+  useEffect(()=>{
+    populateCustomerData();
+    // console.log(params.name);
+  },[]);
   return (
-    <div>
-    <h1>New Connection Form</h1>
+    <div> 
+    <h1>Upadate Customer</h1>
     <div className="nccontainer">
       <form onSubmit={handleSubmit}>
         <div>
@@ -72,7 +75,7 @@ export function NewConnection() {
             id="firstName"
             name="name"
             className="ncinput"
-            value={isSubmit?formData.name:null}
+            // value={customer.name}
             onChange={handleChange}
             required
           />
@@ -184,7 +187,7 @@ export function NewConnection() {
         /><br></br>
 
         <button type="submit" className="ncbutton">
-          Submit Request
+          Update
         </button>
       </form>
       <Row mt-4 >

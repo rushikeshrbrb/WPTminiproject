@@ -24,6 +24,9 @@ export class NavigationBar extends Component {
                             <LinkContainer to={'/login'}>
                                 <Nav.Link className='navcontainer'>Login</Nav.Link>
                             </LinkContainer>
+                            <LinkContainer to={'/customerInfo'}>
+                                <Nav.Link className='navcontainer'>CustomerInfo</Nav.Link>
+                            </LinkContainer>
                             
                         </Nav>
                         <Nav className='ml-auto  '>
