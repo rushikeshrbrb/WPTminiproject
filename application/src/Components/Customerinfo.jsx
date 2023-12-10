@@ -1,12 +1,15 @@
 import { useEffect, useState,useHistory } from "react";
 // import {useHistory} from "react-router-dom";
 import { Button, Container, Table, Header, Alert, Modal } from "react-bootstrap";
-import { deleterCustomerData, fetchCustomerData } from "../Services/services";
+import { deleterCustomerData, fetchCustomerData, saveBookedData } from "../Services/services";
 import { useNavigate } from "react-router-dom";
+import { NavigationBar } from "./NavigationBar";
 export function CustomerInfo() {
   const [customers, setCustomers] = useState([]);
   const [showDialog, setShowDialog] = useState(false);
   const [selectedName, setSelectedName] = useState("");
+  const [bookGas,setBookGas]=useState({});
+  
   const navigate=useNavigate();
   const operModelDialog = () => {
     setShowDialog(true);
@@ -14,6 +17,25 @@ export function CustomerInfo() {
   const closeModelDialog = () => {
     setShowDialog(false);
   };
+
+  const handleBookClick = async(c) => {
+    
+    setBookGas({
+      name: c.name,
+      city: c.city,
+    })
+    console.log(bookGas);
+    try {
+      // Assuming there is a saveBookedData function in your services
+      await saveBookedData(bookGas);
+      console.log("Booked data submitted successfully:", bookGas);
+      // Optionally, you can reset the bookGas state after submission
+      setBookGas({});
+    } catch (error) {
+      console.error("Error submitting booked data:", error);
+    }
+  };
+
 //history hook use to redirect certain url
   async function populateData() {
     try {
@@ -42,6 +64,8 @@ export function CustomerInfo() {
 //         // navigate(`/edit/${selectedName}`);
 //   }
   return (
+    <>
+    <NavigationBar></NavigationBar>
     <div>
       {/* <Header text="List of all the Customers"> </Header> */}
       {customers.length !== 0 ? (
@@ -94,7 +118,7 @@ export function CustomerInfo() {
                         navigate(`/edit/${c.name}`);
                     }}>Edit</Button>
                   </td>
-                  <td><Button>Book</Button></td>
+                  <td><Button onClick={() => handleBookClick(c)}>Book</Button ></td>
                 </tr>
               );
             })}
@@ -120,5 +144,6 @@ export function CustomerInfo() {
         </Modal.Footer>
       </Modal>
     </div>
+    </>
   );
 }

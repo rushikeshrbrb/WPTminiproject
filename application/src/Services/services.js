@@ -56,3 +56,23 @@ export async function fetchDataFromName(name ){
         console.log(error);
     }
 }
+
+export async function saveBookedData (regdata){
+    try {
+        const response=await axios.post("http://127.0.0.1:4555/savebookindata",regdata);
+        return response.data;
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+
+export async function fetchCustomerBookData(){
+    try{
+        const response=await axios.get("http://127.0.0.1:4555/getbookingdata");
+        return response.data;
+    }catch (error) {
+        console.log(error);
+    }
+}
+
