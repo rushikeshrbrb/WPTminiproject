@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import "../Styles/newConnection.css"
 import { fetchDataFromName, saveNewConnection, updateCustomerData } from "../Services/services";
 import { useParams } from "react-router-dom";
+import { NavigationBar } from "./NavigationBar";
 // import './NewConnection.css';
 export function EditCustomerData() {
 
@@ -25,8 +26,11 @@ export function EditCustomerData() {
     zip: ''
   });
  const [customer,setCustomers]=useState({});
+ 
 
   const [isSubmit,setIsSubmit]=useState(false);
+
+  
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -61,6 +65,8 @@ export function EditCustomerData() {
     // console.log(params.name);
   },[]);
   return (
+    <>
+    <NavigationBar></NavigationBar>
     <div> 
     <h1>Upadate Customer</h1>
     <div className="nccontainer">
@@ -197,6 +203,6 @@ export function EditCustomerData() {
       </Row>
     </div>
   </div>
-    
+    </>
   );
 }

@@ -3,6 +3,7 @@ import { Alert, Col, Container, Form , Row} from "react-bootstrap";
 import React, { useState } from 'react';
 import "../Styles/newConnection.css"
 import { saveNewConnection } from "../Services/services";
+import { NavigationBar } from "./NavigationBar";
 // import './NewConnection.css';
 export function NewConnection() {
 
@@ -58,6 +59,8 @@ export function NewConnection() {
     // Add logic to handle form submission (e.g., API request)
   };
   return (
+    <>
+     <NavigationBar></NavigationBar>
     <div>
     <h1>New Connection Form</h1>
     <div className="nccontainer">
@@ -194,6 +197,6 @@ export function NewConnection() {
       </Row>
     </div>
   </div>
-    
+    </>
   );
 }

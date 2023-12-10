@@ -12,7 +12,7 @@ export class NavigationBar extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-5 navitem">
-                            <LinkContainer to={'/'} >
+                            <LinkContainer to={'/home'} >
                                 <Nav.Link className='navcontainer'>Home</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to={'/register'}>
@@ -21,11 +21,14 @@ export class NavigationBar extends Component {
                             <LinkContainer to={'/newConnection'}>
                                 <Nav.Link className='navcontainer'>NewConnection</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to={'/login'}>
+                            <LinkContainer to={'/'}>
                                 <Nav.Link className='navcontainer'>Login</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to={'/customerInfo'}>
                                 <Nav.Link className='navcontainer'>CustomerInfo</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to={'/bookingInfo'}>
+                                <Nav.Link className='navcontainer'>BookingInfoList</Nav.Link>
                             </LinkContainer>
                             
                         </Nav>
